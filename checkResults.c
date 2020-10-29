@@ -15,6 +15,12 @@ int main(int argc, char** argv){
       FILE *referenceOutput;
       myOutput = fopen(argv[1], "r");
       referenceOutput = fopen(argv[2], "r");
+      if (myOutput == NULL){
+      	printf("ERROR in opening file passed to argv[1].\n");
+      }
+      if (referenceOutput == NULL){
+      	printf("ERROR in opening file passed to argv[2].\n");
+      }
       unsigned char mybuffer[1];
       unsigned char referenceBuffer[1];
       while(fread(mybuffer, sizeof(mybuffer), 1, myOutput) && fread(referenceBuffer, sizeof(referenceBuffer), 1, referenceOutput)){

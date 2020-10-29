@@ -23,6 +23,8 @@ int main(int argc, char** argv){
             return 0;
          }
       }
+      fclose(myOutput);
+      fclose(referenceOutput);
       printf("Files ARE equal.\n");
       return 1;
    }

@@ -17,9 +17,11 @@ int main(int argc, char** argv){
       referenceOutput = fopen(argv[2], "r");
       if (myOutput == NULL){
       	printf("ERROR in opening file passed to argv[1].\n");
+         return 0;
       }
       if (referenceOutput == NULL){
       	printf("ERROR in opening file passed to argv[2].\n");
+         return 0;
       }
       unsigned char mybuffer[1];
       unsigned char referenceBuffer[1];
